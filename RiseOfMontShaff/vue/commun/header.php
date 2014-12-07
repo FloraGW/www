@@ -21,3 +21,5 @@
     </header>
     
     <?php include("menu.php"); ?>
+    
+    <div class="module">
