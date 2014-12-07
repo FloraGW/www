@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-
 <?php 
+include('vue/commun/header.php');
+
 if(sizeof($categories) != 0)
 {
 	foreach($categories as $categorie)
@@ -20,9 +18,9 @@ else
 {
 ?>
 <div>
-	<h5>Aucune cat&eacute;gorie n'a encore &eacute;t&eacute; d&eacute;finie sur le forum...</h5>
+	<h5>Aucune catégorie n'a encore été définie sur le forum...</h5>
 </div>
 <?php 
 }
+include('vue/commun/footer.php');
 ?>
-</html>

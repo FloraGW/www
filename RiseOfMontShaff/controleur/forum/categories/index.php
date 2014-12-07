@@ -1,5 +1,5 @@
 <?php
-include_once('modele/forum/categorie/getAllCategories.php');
+include_once('modele/forum/categories/getAllCategories.php');
 $categories = getAllCategories();
 
 foreach($categories as $cle => $categorie)

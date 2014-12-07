@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
-
 
 <?php 
+include('vue/commun/header.php');
+
 if(sizeof($nouvelles) != 0)
 {
 	foreach($nouvelles as $nouvelle)
@@ -27,9 +26,9 @@ else
 {
 ?>
 <div>
-	<h5>Aucune nouvelle n'a encore &eacute;t&eacute; ajout&eacute;e au site...</h5>
+	<h5>Aucune nouvelle n'a encore été ajoutée au site...</h5>
 </div>
 <?php 
 }
+include('vue/commun/footer.php');
 ?>
-</html>
