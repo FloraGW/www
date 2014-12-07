@@ -2,8 +2,10 @@
 
 body {
 	font-family: Verdana, Geneva, sans-serif;
-	background-image: url("vue/commun/image/mountain_rise.png");
+	background-color: black;
+	background-image: url(image/mountain_rise.png);
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 header {
