@@ -3,8 +3,10 @@ if(isset($_GET['noCategorie']))
 {
 	include_once('modele/forum/fils/getAllFilsByCategorie.php');
 	$fils = getAllFilsByCategorie($_GET['noCategorie']);
+	include_once('modele/forum/categories/getCategorie.php');
+	$categorie = getCategorie($_GET['noCategorie']);
 	
-	if(sizeof($fils) != 0)
+	if($categorie != false)
 	{
 		foreach($fils as $cle => $fil)
 		{
@@ -15,13 +17,17 @@ if(isset($_GET['noCategorie']))
 	}
 	else
 	{
-		include_once('controleur/forum/categories/index.php');
+		header('Location: controleur/forum/categories/index.php');
 	}
 	
 }
+else if(isset($_SERVER['HTTP_REFERER']))
+{
+	header("Location:".$_SERVER['HTTP_REFERER']);
+}
 else
 {
-	include_once('controleur/forum/categories/index.php');
+	header('Location: controleur/forum/categories/index.php');
 }
 
 ?>
