@@ -6,6 +6,7 @@ body {
 	background-image: url(image/mountain_rise.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-size: cover;
 }
 
 header {
@@ -19,5 +20,21 @@ footer {
 div.header, div.footer {
 	background-color: black;
 	color: white;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0px;
+	width:100%;
+	position:absolute;
+	left: 0;
+}
+div.header {
+	top: 0;
+}
+div.footer {
+    bottom: 0;
+}
+div.titre {
+	text-align: center;
+	font-size: 200%;
+	padding: 50px;
 }
