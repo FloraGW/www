@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	background-image: url("vue/commun/image/mountain_rise.png");
+	background-repeat: no-repeat;
+}
+
+header {
+	text-align: right;
+}
+
+footer {
+    text-align: center;
+}
+
+div.header, div.footer {
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
