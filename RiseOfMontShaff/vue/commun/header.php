@@ -19,3 +19,5 @@
        		<br>MONT-SHÄFF</b>
        	</div>
     </header>
+    
+    <?php include("menu.php"); ?>
