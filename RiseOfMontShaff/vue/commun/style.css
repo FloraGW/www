@@ -18,7 +18,6 @@ footer {
 }
 
 div.header, div.footer {
-	background-color: black;
 	color: white;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -26,6 +25,15 @@ div.header, div.footer {
 	width: 100%;
 	position:absolute;
 	left: 0;
+	background: rgba(46,46,46,1);
+	background: -moz-linear-gradient(top, rgba(46,46,46,1) 0%, rgba(31,31,31,1) 50%, rgba(15,15,15,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(46,46,46,1)), color-stop(50%, rgba(31,31,31,1)), color-stop(100%, rgba(15,15,15,1)));
+	background: -webkit-linear-gradient(top, rgba(46,46,46,1) 0%, rgba(31,31,31,1) 50%, rgba(15,15,15,1) 100%);
+	background: -o-linear-gradient(top, rgba(46,46,46,1) 0%, rgba(31,31,31,1) 50%, rgba(15,15,15,1) 100%);
+	background: -ms-linear-gradient(top, rgba(46,46,46,1) 0%, rgba(31,31,31,1) 50%, rgba(15,15,15,1) 100%);
+	background: linear-gradient(to bottom, rgba(46,46,46,1) 0%, rgba(31,31,31,1) 50%, rgba(15,15,15,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e2e2e', endColorstr='#0f0f0f', GradientType=0 );
+
 }
 div.header {
 	top: 0;
@@ -41,28 +49,53 @@ div.titre {
 div.menu, div.module {
 	margin-left: 25%;
 	margin-right: 25%;
-	background-color: gray;
+	min-width: 1000px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+div.menu {
+	background: rgba(15,15,15,1);
+	background: -moz-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(15,15,15,1)), color-stop(50%, rgba(46,46,46,1)), color-stop(100%, rgba(15,15,15,1)));
+	background: -webkit-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	background: -o-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	background: -ms-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	background: linear-gradient(to bottom, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0f0f0f', GradientType=0 );
 }
 
 ul#menu {
     padding: 0;
-    margin-bottom: 11px;
 }
-
 ul#menu li {
     display: inline;
-    margin-right: 3px;
 }
-
 ul#menu li a {
-    background-color: #ffffff;
-    padding: 10px 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
     text-decoration: none;
-    color: #696969;
-    border-radius: 4px 4px 0 0;
+    color: white;
+    /*background: rgba(15,15,15,1);
+	background: -moz-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(15,15,15,1)), color-stop(50%, rgba(46,46,46,1)), color-stop(100%, rgba(15,15,15,1)));
+	background: -webkit-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	background: -o-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	background: -ms-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	background: linear-gradient(to bottom, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0f0f0f', GradientType=0 );*/
 }
 
 ul#menu li a:hover {
-    color: white;
-    background-color: black;
+    color: black;   
+	background: rgba(160,160,160,1);
+	background: -moz-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(222,222,222,1) 50%, rgba(160,160,160,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(160,160,160,1)), color-stop(50%, rgba(222,222,222,1)), color-stop(100%, rgba(160,160,160,1)));
+	background: -webkit-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(222,222,222,1) 50%, rgba(160,160,160,1) 100%);
+	background: -o-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(222,222,222,1) 50%, rgba(160,160,160,1) 100%);
+	background: -ms-linear-gradient(top, rgba(160,160,160,1) 0%, rgba(222,222,222,1) 50%, rgba(160,160,160,1) 100%);
+	background: linear-gradient(to bottom, rgba(160,160,160,1) 0%, rgba(222,222,222,1) 50%, rgba(160,160,160,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0a0a0', endColorstr='#a0a0a0', GradientType=0 );
 } 
