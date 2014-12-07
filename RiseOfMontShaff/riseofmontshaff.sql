@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 07 Décembre 2014 à 19:20
+-- Généré le :  Lun 08 Décembre 2014 à 00:35
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -85,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Nom` varchar(25) NOT NULL,
   `MotDePasse` varchar(25) NOT NULL,
   `Role` varchar(25) NOT NULL,
+  `Avatar` varchar(255) NOT NULL,
   PRIMARY KEY (`noUtilisateur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
