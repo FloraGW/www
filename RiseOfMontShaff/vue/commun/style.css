@@ -7,6 +7,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	margin: 0px;
 }
 
 header {
@@ -21,7 +22,6 @@ div.header, div.footer {
 	color: white;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	margin: 0px;
 	width: 100%;
 	position:absolute;
 	left: 0;
@@ -50,7 +50,6 @@ div.titre {
 div.menu, div.module {
 	margin-left: 25%;
 	margin-right: 25%;
-	margin-bottom: 15px;
 	min-width: 1000px;
 	
 }

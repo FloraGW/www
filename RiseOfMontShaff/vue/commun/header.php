@@ -8,7 +8,7 @@
  
     <body>
  
-    <!-- L'en-t�te -->
+    <div 
     
     <header>
     	<div class="header">
