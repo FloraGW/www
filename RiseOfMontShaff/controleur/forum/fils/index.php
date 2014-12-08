@@ -1,10 +1,9 @@
 <?php
 if(isset($_GET['noCategorie']))
 {
-	include_once($_SERVER['DOCUMENT_ROOT'] . '/RiseOfMontShaff/modele/commun/connexionSQL.php');
-	include_once($_SERVER['DOCUMENT_ROOT'] . '/RiseOfMontShaff/modele/forum/fils/getAllFilsByCategorie.php');
+	include_once('modele/forum/fils/getAllFilsByCategorie.php');
 	$fils = getAllFilsByCategorie($_GET['noCategorie']);
-	include_once($_SERVER['DOCUMENT_ROOT'] . '/RiseOfMontShaff/modele/forum/categories/getCategorie.php');
+	include_once('modele/forum/categories/getCategorie.php');
 	$categorie = getCategorie($_GET['noCategorie']);
 	
 	if($categorie != false)
@@ -18,17 +17,13 @@ if(isset($_GET['noCategorie']))
 	}
 	else
 	{
-		header('Location: controleur/forum/categories/index.php');
+		header('Location: pageInexistante.php');
 	}
 	
 }
-else if(isset($_SERVER['HTTP_REFERER']))
-{
-	header("Location:".$_SERVER['HTTP_REFERER']);
-}
 else
 {
-	header('Location: controleur/forum/categories/index.php');
+	header('Location: pageInexistante.php');
 }
 
 ?>

@@ -5,6 +5,8 @@ if(isset($_GET['noFil']))
 	$posts = getAllPostsByFil($_GET['noFil']);
 	include_once('modele/forum/fils/getFil.php');
 	$fil = getFil($_GET['noFil']);
+	include_once('modele/forum/categories/getCategorie.php');
+	$categorie = getCategorie($fil['noCategorie']);
 	if($fil != false)
 	{
 		foreach($posts as $cle => $post)
@@ -16,18 +18,12 @@ if(isset($_GET['noFil']))
 	}
 	else
 	{
-		//Redirection vers categories TESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSTTTT
-		//Pour tester, il faut changer le paramètre noFil dans l'URL en un noFil inexistant dans la base
-		header('Location: controleur/forum/categories/index.php');
+		header('Location: pageInexistante.php');
 	}
 
 }
-else if(isset($_SERVER['HTTP_REFERER']))
-{
-	header("Location:".$_SERVER['HTTP_REFERER']);
-}
 else
 {
-	header('Location: controleur/forum/categories/index.php');
+	header('Location: pageInexistante.php');
 }
 ?>

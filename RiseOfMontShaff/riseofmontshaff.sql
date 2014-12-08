@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 08 Décembre 2014 à 01:10
+-- Généré le :  Lun 08 Décembre 2014 à 04:37
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -53,7 +53,14 @@ CREATE TABLE IF NOT EXISTS `fil` (
   `noCategorie` int(11) NOT NULL,
   `Nom` varchar(100) NOT NULL,
   PRIMARY KEY (`noFil`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `fil`
+--
+
+INSERT INTO `fil` (`noFil`, `noCategorie`, `Nom`) VALUES
+(1, 1, 'PREMIER FIL');
 
 -- --------------------------------------------------------
 
@@ -69,13 +76,6 @@ CREATE TABLE IF NOT EXISTS `nouvelle` (
   PRIMARY KEY (`noNouvelle`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Contenu de la table `nouvelle`
---
-
-INSERT INTO `nouvelle` (`noNouvelle`, `Titre`, `Contenu`, `DateCreation`) VALUES
-(1, 'Ouverture !', 'C''est la grande ouverture du site officiel du jeu vidéo le plus attendu de l''année : The Rise of Mont-Shäff !!!', '2014-12-07 23:39:10');
-
 -- --------------------------------------------------------
 
 --
@@ -89,7 +89,14 @@ CREATE TABLE IF NOT EXISTS `post` (
   `Contenu` text NOT NULL,
   `DateCreation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`noPost`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `post`
+--
+
+INSERT INTO `post` (`noPost`, `noFil`, `noUtilisateur`, `Contenu`, `DateCreation`) VALUES
+(1, 1, 1, 'Premier fil du forum !!!', '2014-12-08 03:14:57');
 
 -- --------------------------------------------------------
 
@@ -104,7 +111,14 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Role` varchar(25) NOT NULL,
   `Avatar` varchar(255) NOT NULL,
   PRIMARY KEY (`noUtilisateur`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`noUtilisateur`, `Nom`, `MotDePasse`, `Role`, `Avatar`) VALUES
+(1, 'Sideni', '123456', 'Dieu', 'vue/utilisateur/image/sideni.jpg');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

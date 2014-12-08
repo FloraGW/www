@@ -2,8 +2,12 @@
 include('vue/commun/header.php');
 ?>
 <div>
-	<h2><a href="controleur/forum/fils/index.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a></h2>
+
+	<h2><a href="categories.php">Forum</a> > 
+	<a href="fils.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a> > 
+	<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a></h2>
 	<?php
+	
 	if(sizeof($posts) != 0)
 	{
 		foreach($posts as $post)
@@ -18,7 +22,7 @@ include('vue/commun/header.php');
 			<i><?php echo $post['dateCreation']; ?></i>
 			</span>
 			<h3>
-				<a href="controleur/forum/posts/index.php?noFil=<?php echo $fil['noCategorie']; ?>"><?php echo $fil['nom']; ?></a>
+				<a href="posts.php?noFil=<?php echo $fil['noCategorie']; ?>"><?php echo $fil['nom']; ?></a>
 			</h3>	
 		</div>
 		<?php 
