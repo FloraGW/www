@@ -11,9 +11,11 @@ include('vue/commun/header.php');
 		?>
 		<div>
 			<span> <!-- Utilisateur -->
-				
+			<?php include('controleur/utilisateur/index.php'); ?>
 			</span>
 			<span> <!-- Post -->
+			<?php echo $post['contenu']; ?><br />
+			<h6><?php echo $post['dateCreation']; ?></h6>
 			</span>
 			<h3>
 				<a href="controleur/forum/posts?noFil=<?php echo $fil['noCategorie']; ?>"><?php echo $fil['nom']; ?></a>
