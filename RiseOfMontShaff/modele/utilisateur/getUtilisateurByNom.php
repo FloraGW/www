@@ -1,5 +1,5 @@
 <?php
-function getUtilisateur($nomUtilisateur)
+function getUtilisateurByNom($nomUtilisateur)
 {
 	global $bdd;
 	
