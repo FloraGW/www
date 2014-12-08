@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST['nom']) && isset($_POST['motDePasse']))
 {
 	include_once('modele/utilisateur/getUtilisateurValide.php');
