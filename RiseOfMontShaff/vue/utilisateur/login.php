@@ -1,5 +1,14 @@
 <?php
-if(!isset($_SESSION['utilisateur']) || $_SESSION == null)
+if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
+{
+?>
+	Bonjour <?php echo $_SESSION['utilisateur']['nom']?> !
+	<form method="post" action="login.php">
+		<input type="submit" value="Se déconnecter" />
+	</form>
+<?php	
+}
+else
 {
 ?>
 	<form method="post" action="login.php">
@@ -7,14 +16,8 @@ if(!isset($_SESSION['utilisateur']) || $_SESSION == null)
 		Mot de passe : <input type="password" name="motDePasse" />
 		<input type="submit" value="Se connecter" />
 	</form>
-<?php	
-}
-else
-{
-?>
-	Bonjour <?php echo $_SESSION['utilisateur']['nom']?> !
-	<form method="post" action="login.php">
-		<input type="submit" value="Se déconnecter" />
+  | <form action="creerCompte.php">
+    	<input type="submit" value="Créer un compte">
 	</form>
 <?php
 }

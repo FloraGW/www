@@ -10,14 +10,10 @@ if(isset($_POST['nom']) && isset($_POST['motDePasse']))
 		$_SESSION['utilisateur'] = $utilisateur;
 	}
 	
-	include_once('vue/utilisateur/login.php');
+	header("Location: " . $_SERVER['HTTP_REFERER']);
 }
 else if(isset($_SESSION['utilisateur']))
 {
 	$_SESSION['utilisateur'] = null;
-	include_once('vue/utilisateur/login.php');
-}
-else
-{
-	include_once('vue/utilisateur/login.php');
+	header("Location: " . $_SERVER['HTTP_REFERER']);
 }
