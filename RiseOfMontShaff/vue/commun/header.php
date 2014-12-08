@@ -7,19 +7,18 @@
     </head>
  
     <body>
- 
-    <div 
     
-    <header>
-    	<div class="header">
-       		Rise of Montshäff
-       	</div>
-       	<div class="titre">
-       		<b>THE RISE OF
-       		<br>MONT-SHÄFF</b>
-       	</div>
-    </header>
-    
-    <?php include("menu.php"); ?>
-    
-    <div class="module">
+    <div id="wrap">
+	    <header>
+	    	<div class="header">
+	       		Rise of Montshäff
+	       	</div>
+	       	<div class="titre">
+	       		<b>THE RISE OF
+	       		<br>MONT-SHÄFF</b>
+	       	</div>
+	    </header>
+	    
+	    <?php include("menu.php"); ?>
+	    
+	    <div class="module">
