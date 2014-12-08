@@ -1,25 +1,33 @@
 @CHARSET "ISO-8859-1";
 
 div.nouvelle {
-
-background: rgba(255,255,255,0.85);
-background: -moz-linear-gradient(left, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0.85)), color-stop(100%, rgba(255,255,255,0.85)));
-background: -webkit-linear-gradient(left, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 100%);
-background: -o-linear-gradient(left, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 100%);
-background: -ms-linear-gradient(left, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 100%);
-background: linear-gradient(to right, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 100%);
+background: rgba(222,222,222,0.85);
+background: -moz-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(222,222,222,0.85)), color-stop(100%, rgba(222,222,222,0.85)));
+background: -webkit-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -o-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: linear-gradient(to right, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
 
-
+div.nouvelleTitre, div.nouvelleTexte, div.nouvelleDate {
+	padding: 10px;
 }
 
 div.nouvelleTitre {
-	/*background-image: url('vue/commun/image/pattern1.jpg');
-	background-repeat: no-repeat;
+	background-image: url('../commun/image/pattern1.jpg');
+	background-repeat: repeat;
 	background-attachment: fixed;
-	background-size: cover;*/
 	background-color: white;
 	font-size: 125%;
-	padding: 10px;
+}
+
+div.nouvelleTexte {
+	text-align: justified;
+}
+
+div.nouvelleDate {
+	text-align: right;
+	font-size: 75%;
 }
