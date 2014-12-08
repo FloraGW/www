@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 08 Décembre 2014 à 00:35
+-- Généré le :  Lun 08 Décembre 2014 à 01:10
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -30,7 +30,17 @@ CREATE TABLE IF NOT EXISTS `categorie` (
   `noCategorie` int(11) NOT NULL AUTO_INCREMENT,
   `Nom` varchar(100) NOT NULL,
   PRIMARY KEY (`noCategorie`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `categorie`
+--
+
+INSERT INTO `categorie` (`noCategorie`, `Nom`) VALUES
+(1, 'Divers'),
+(2, 'Problèmes techniques'),
+(3, 'Suggestions'),
+(4, 'Guides');
 
 -- --------------------------------------------------------
 
@@ -57,7 +67,14 @@ CREATE TABLE IF NOT EXISTS `nouvelle` (
   `Contenu` text NOT NULL,
   `DateCreation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`noNouvelle`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `nouvelle`
+--
+
+INSERT INTO `nouvelle` (`noNouvelle`, `Titre`, `Contenu`, `DateCreation`) VALUES
+(1, 'Ouverture !', 'C''est la grande ouverture du site officiel du jeu vidéo le plus attendu de l''année : The Rise of Mont-Shäff !!!', '2014-12-07 23:39:10');
 
 -- --------------------------------------------------------
 
