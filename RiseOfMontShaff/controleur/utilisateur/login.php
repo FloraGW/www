@@ -11,9 +11,11 @@ if(isset($_POST['nom']) && isset($_POST['motDePasse']))
 	}
 	
 	header("Location: " . $_SERVER['HTTP_REFERER']);
+	exit();
 }
 else if(isset($_SESSION['utilisateur']))
 {
 	$_SESSION['utilisateur'] = null;
 	header("Location: " . $_SERVER['HTTP_REFERER']);
+	exit();
 }
