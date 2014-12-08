@@ -18,18 +18,12 @@ if(isset($_GET['noFil']))
 	}
 	else
 	{
-		//Redirection vers categories TESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSTTTT
-		//Pour tester, il faut changer le paramètre noFil dans l'URL en un noFil inexistant dans la base
-		header('Location: controleur/forum/categories/index.php');
+		header('Location: pageInexistante.php');
 	}
 
 }
-else if(isset($_SERVER['HTTP_REFERER']))
-{
-	header("Location:".$_SERVER['HTTP_REFERER']);
-}
 else
 {
-	header('Location: controleur/forum/categories/index.php');
+	header('Location: pageInexistante.php');
 }
 ?>

@@ -17,17 +17,13 @@ if(isset($_GET['noCategorie']))
 	}
 	else
 	{
-		header('Location: controleur/forum/categories/index.php');
+		header('Location: pageInexistante.php');
 	}
 	
 }
-else if(isset($_SERVER['HTTP_REFERER']))
-{
-	header("Location: ".$_SERVER['HTTP_REFERER']);
-}
 else
 {
-	header('Location: controleur/forum/categories/index.php');
+	header('Location: pageInexistante.php');
 }
 
 ?>
