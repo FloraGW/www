@@ -2,7 +2,7 @@
 include('vue/commun/header.php');
 ?>
 <div>
-	<h2><a href="controleur/forum/categories?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a></h2>
+	<h2><a href="controleur/forum/categories/index.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a></h2>
 	<?php
 	if(sizeof($categories) != 0)
 	{
@@ -11,7 +11,7 @@ include('vue/commun/header.php');
 		?>
 		<div>
 			<h3>
-				<a href="controleur/forum/posts?noFil=<?php echo $fil['noCategorie']; ?>"><?php echo $fil['nom']; ?></a>
+				<a href="controleur/forum/posts/index.php?noFil=<?php echo $fil['noCategorie']; ?>"><?php echo $fil['nom']; ?></a>
 			</h3>	
 		</div>
 		<?php 
