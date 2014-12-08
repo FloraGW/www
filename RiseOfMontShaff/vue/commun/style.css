@@ -74,6 +74,7 @@ div.menu {
 	background: linear-gradient(to bottom, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0f0f0f', GradientType=0 );
 	margin-bottom: 15px;
+	border-width: small;
 }
 div.module {
 	overflow:auto;

@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="vue/forum/style.css">
+
 <?php 
 include('vue/commun/header.php');
 

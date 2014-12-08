@@ -11,6 +11,7 @@
     <div id="wrap">
 	    <header>
 	    	<div class="header">
+	    		The Rise of Mont-Shäff
 	       		<?php include("login.php"); ?>
 	       	</div>
 	       	<div class="titre">
