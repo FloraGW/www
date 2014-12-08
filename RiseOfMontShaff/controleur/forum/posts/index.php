@@ -5,6 +5,8 @@ if(isset($_GET['noFil']))
 	$posts = getAllPostsByFil($_GET['noFil']);
 	include_once('modele/forum/fils/getFil.php');
 	$fil = getFil($_GET['noFil']);
+	include_once('modele/forum/categories/getCategorie.php');
+	$categorie = getCategorie($fil['noCategorie']);
 	if($fil != false)
 	{
 		foreach($posts as $cle => $post)

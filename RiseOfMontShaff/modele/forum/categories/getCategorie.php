@@ -5,7 +5,7 @@ function getCategorie($noCategorie)
 	
 	$req = $bdd->prepare("SELECT noCategorie, nom
 			FROM categorie WHERE noCategorie = ?");
-	$req->execute($noCategorie);
+	$req->execute(array($noCategorie));
 	
 	$categorie = $req->fetch();
 	

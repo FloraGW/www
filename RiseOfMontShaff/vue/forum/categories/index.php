@@ -8,7 +8,7 @@ if(sizeof($categories) != 0)
 ?>
 <div>
 	<h3>
-		<a href="controleur/forum/fils/index.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a>
+		<a href="fils.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a>
 	</h3>	
 </div>
 <?php 
