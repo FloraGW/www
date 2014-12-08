@@ -12,13 +12,12 @@ if(sizeof($nouvelles) != 0)
 	<div class="nouvelleTitre">
 		<b><?php echo $nouvelle['titre']; ?></b>
 	</div>
-	<h6>
-		<?php echo $nouvelle['dateCreation']; ?>
-	</h6>
-	<p>
+	<div class="nouvelleDate">
+		<b><?php echo $nouvelle['dateCreation']; ?></b>
+	</div>
+	<div class="nouvelleTexte">
 		<?php echo $nouvelle['contenu']; ?>
-	</p>
-	
+	</div>
 </div>
 <?php 
 	}
