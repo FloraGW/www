@@ -8,7 +8,7 @@ include('vue/commun/header.php');
 if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
 {?>
 	<form method="post" action="creerCategorie.php">
-		Nom de la catégorie : <input type="text" name="nomDeLaCategorie" />
+		Nom de la catégorie : <input type="text" name="nomCategorie" />
 		<input type="submit" value="Créer"/>
 	</form>
 <?php
