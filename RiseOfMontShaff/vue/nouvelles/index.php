@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="vue/nouvelles/style.css">
 
 <?php 
 include('vue/commun/header.php');
@@ -7,10 +8,10 @@ if(sizeof($nouvelles) != 0)
 	foreach($nouvelles as $nouvelle)
 	{
 ?>
-<div>
-	<h3>
-		<?php echo $nouvelle['titre']; ?>
-	</h3>
+<div class="nouvelle">
+	<div class="nouvelleTitre">
+		<b><?php echo $nouvelle['titre']; ?></b>
+	</div>
 	<h6>
 		<?php echo $nouvelle['dateCreation']; ?>
 	</h6>

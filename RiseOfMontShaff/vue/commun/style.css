@@ -50,11 +50,11 @@ div.menu, div.module {
 	margin-left: 25%;
 	margin-right: 25%;
 	min-width: 1000px;
+	
+}
+div.menu {
 	padding-top: 1px;
 	padding-bottom: 1px;
-}
-
-div.menu {
 	background: rgba(15,15,15,1);
 	background: -moz-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(15,15,15,1)), color-stop(50%, rgba(46,46,46,1)), color-stop(100%, rgba(15,15,15,1)));
@@ -63,6 +63,9 @@ div.menu {
 	background: -ms-linear-gradient(top, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
 	background: linear-gradient(to bottom, rgba(15,15,15,1) 0%, rgba(46,46,46,1) 50%, rgba(15,15,15,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0f0f0f', GradientType=0 );
+}
+div.module {
+	padding: 5px;
 }
 
 ul#menu {
