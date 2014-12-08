@@ -10,11 +10,7 @@ if(isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['motDePasse']) 
 		$nom = $_POST['nom'];
 		$motDePasse = $_POST['motDePasse'];
 		$avatar = "";
-		// Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
-		if (isset($_FILES['avatar']) AND $_FILES['avatar']['error'] == 0)
-		{
-			include_once("modele/utilisateur/validateAvatar.php");
-		}
+		include_once("modele/utilisateur/validateAvatar.php");
 		include_once('modele/utilisateur/insertUtilisateur.php');
 		$_REQUEST['ajoute'] = insertUtilisateur($nom, $motDePasse, $avatar);
 	}

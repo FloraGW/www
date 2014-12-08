@@ -7,7 +7,7 @@ include('vue/commun/header.php');
 <?php
 if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
 {?>
-	<form method="post" action="">
+	<form method="post" action="creerCategorie.php">
 		Nom de la catégorie : <input type="text" name="nomDeLaCategorie" />
 		<input type="submit" value="Créer"/>
 	</form>
@@ -38,8 +38,9 @@ if(sizeof($categories) != 0)
 			if(isset($_POST['noCatMod']) && $_POST['noCatMod'] == $categorie['noCategorie'])
 			{
 				?>
-				<form method="post" action="">
+				<form method="post" action="modifierCategorie.php">
 					<input type="text" name="nomCategorie" value="<?php echo $categorie['nom'];?>"/>
+					<input type="hidden" name="noCatMod" value="<?php echo $categorie['noCategorie'];?>"/>
 					<input type="submit" value="Modifier"/>
 				</form>
 				<?php
