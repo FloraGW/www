@@ -44,7 +44,8 @@ div.footer {
 div.titre {
 	text-align: center;
 	font-size: 200%;
-	padding: 60px;
+	padding-top: 90px;
+	padding-bottom: 60px;
 }
 div.menu, div.module {
 	margin-left: 25%;
