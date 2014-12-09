@@ -4,6 +4,19 @@ include('vue/commun/header.php');
 <div>
 	<h2><a href="categories.php">Forum</a> > 
 	<a href="fils.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a></h2>
+	<div>
+	<?php
+	if(isset($_SESSION['utilisateur']))
+	{?>
+		<form method="post" action="creerFil.php">
+			Nom du fil : <input type="text" name="nomFil" />
+			<input type="hidden" name="noCategorie" value="<?php echo $categorie['noCategorie']; ?>" />
+			<input type="submit" value="Créer"/>
+		</form>
+	<?php
+	}
+	?>
+	</div>
 	<?php
 	if(sizeof($fils) != 0)
 	{
@@ -12,7 +25,7 @@ include('vue/commun/header.php');
 		?>
 		<div>
 			<h3>
-				<a href="posts.php?noFil=<?php echo $fil['noCategorie']; ?>"><?php echo $fil['nom']; ?></a>
+				<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a>
 			</h3>	
 		</div>
 		<?php 

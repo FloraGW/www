@@ -20,10 +20,7 @@ include('vue/commun/header.php');
 			<span> <!-- Post -->
 			<?php echo $post['contenu']; ?><br />
 			<i><?php echo $post['dateCreation']; ?></i>
-			</span>
-			<h3>
-				<a href="posts.php?noFil=<?php echo $fil['noCategorie']; ?>"><?php echo $fil['nom']; ?></a>
-			</h3>	
+			</span>	
 		</div>
 		<?php 
 		}
@@ -36,6 +33,21 @@ include('vue/commun/header.php');
 	}
 	?>
 </div>
+<div>
+	<?php
+	if(isset($_SESSION['utilisateur']))
+	{
+	?>
+		<form method="post" action="creerPost.php">
+			<textarea name="contenu" rows="8" cols="45"></textarea>
+			<input type="hidden" name="noFil" value="<?php echo $fil['noFil']; ?>" />
+			<input type="hidden" name="noUtilisateur" value="<?php echo $_SESSION['utilisateur']['noUtilisateur']; ?>"/>
+			<input type="submit" value="Créer"/>
+		</form>
+	<?php
+	}
+	?>
+	</div>
 <?php
 include('vue/commun/footer.php');
 ?>
