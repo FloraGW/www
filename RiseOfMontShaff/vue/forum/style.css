@@ -17,6 +17,7 @@ div.categorie {
 div.fin {
 	border-style: solid;
 	border-width: 0px 0px 2px 0px;
+	margin-bottom: 15px;
 }
 
 div.post {
@@ -30,6 +31,14 @@ div.post {
 	background: -ms-linear-gradient(left, rgba(34,34,34,0.95) 0%, rgba(34,34,34,0.95) 100%);
 	background: linear-gradient(to right, rgba(34,34,34,0.95) 0%, rgba(34,34,34,0.95) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+div.repondre {
+	padding: 10px;
+	margin-bottom: 15px;
+	border-style: solid;
+	border-width: 2px;
+	background-color: black;
+	background-image: url('../commun/image/pattern2.jpg');
 }
 
 span.postUtilisateur, span.postTexte {

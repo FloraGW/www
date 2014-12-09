@@ -4,16 +4,7 @@
 include('vue/commun/header.php');
 ?>
 <div>
-<?php
-if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
-{?>
-	<form method="post" action="creerCategorie.php">
-		Nom de la catégorie : <input type="text" name="nomCategorie" />
-		<input type="submit" value="Créer"/>
-	</form>
-<?php
-}
-?>
+
 </div>
 <?php
 if(sizeof($categories) != 0)
@@ -75,7 +66,22 @@ else
 <div>
 	<h5>Aucune catégorie n'a encore été définie sur le forum...</h5>
 </div>
+
 <?php 
+}
+
+if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
+{?>
+	<div class="categorie">
+	Créer une nouvelle catégorie
+	</div>
+	<div class="repondre">
+	<form method="post" action="creerCategorie.php">
+		Titre de la catégorie : <input type="text" name="nomCategorie" />
+		<input type="submit" value="Créer"/>
+	</form>
+	</div>
+<?php
 }
 include('vue/commun/footer.php');
 ?>

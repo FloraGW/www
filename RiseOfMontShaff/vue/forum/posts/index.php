@@ -3,11 +3,13 @@
 <?php
 include('vue/commun/header.php');
 ?>
-<div>
+<div class="categorie">
 
-	<h2><a href="categories.php">Forum</a> > 
+	<a href="categories.php">Forum</a> > 
 	<a href="fils.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a> > 
-	<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a></h2>
+	<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a>
+	</div>
+	<div class="fin"></div>
 	<?php
 	
 	if(sizeof($posts) != 0)
@@ -73,18 +75,23 @@ include('vue/commun/header.php');
 	<?php
 	}
 	?>
-</div>
 <div>
 	<?php
 	if(isset($_SESSION['utilisateur']))
 	{
 	?>
+	<div class="categorie">
+	Répondre à ce fil
+	</div>
+	<div class="repondre">
 		<form method="post" action="creerPost.php">
-			<textarea name="contenu" rows="8" cols="45"></textarea>
+			<textarea name="contenu" rows="8" cols="119"></textarea>
+			<br />
 			<input type="hidden" name="noFil" value="<?php echo $fil['noFil']; ?>" />
 			<input type="hidden" name="noUtilisateur" value="<?php echo $_SESSION['utilisateur']['noUtilisateur']; ?>"/>
-			<input type="submit" value="Publier"/>
+			<input type="submit" value="Publier"/>		
 		</form>
+	</div>
 	<?php
 	}
 	?>
