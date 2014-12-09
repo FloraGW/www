@@ -7,11 +7,18 @@ include('vue/commun/header.php');
 <?php
 if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
 {?>
+<div class="nouvelle">
+	<div class="nouvelleTitre">
+	Créer une nouvelle nouvelle
+	</div>
+	<div class="repondre">
 	<form method="post" action="creerNouvelle.php">
 		Titre de la nouvelle : <input type="text" name="titre" />
-		Contenu : <textarea name="contenu"></textarea>
-		<input type="submit" value="Publier"/>
+		<br />Contenu :<br /><textarea name="contenu" rows="10" cols="119"></textarea>
+		<br /><input type="submit" value="Publier"/>
 	</form>
+	</div>
+	</div>
 <?php
 }
 ?>
