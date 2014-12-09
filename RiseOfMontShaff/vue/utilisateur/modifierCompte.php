@@ -49,12 +49,12 @@ else
 }
 ?>
 <div class="creation">
-<img src="<?php $_SESSION['utilisateur']['avatar']; ?>" />
 	<form method="post" action="modifierCompte.php" enctype="multipart/form-data">
 		Pseudonyme : <input type="text" name="nom"/><br/>
 		Mot de passe : <input type="password" name="motDePasse"/><br/>
 		Entrez à nouveau le mot de passe : <input type="password" name="motDePasse2"/><br/>
-		Avatar : <input type="file" name="avatar"/><br/>
+		Image actuelle : <img src="<?php echo $_SESSION['utilisateur']['avatar']; ?>" /><br/>
+		Avatar : <input type="file" name="image"/><br/>
 		<input type="submit" value="Modifier">
 	</form>
 </div>
