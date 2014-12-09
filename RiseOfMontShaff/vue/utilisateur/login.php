@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="vue/utilisateur/style.css">
 <div class="login">
 
 <?php
@@ -17,10 +18,10 @@ else
 		Pseudonyme : <input type="text" name="nom" />
 		Mot de passe : <input type="password" name="motDePasse" />
 		<input type="submit" value="Se connecter" />
-	</form><!-- 
+	</form> 
   | <form action="creerCompte.php">
     	<input type="submit" value="Créer un compte">
-	</form> -->
+	</form>
 <?php
 }
 ?>

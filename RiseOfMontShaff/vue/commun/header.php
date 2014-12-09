@@ -12,7 +12,7 @@
     <div id="wrap">
 	    <header>
 	    	<div class="header">
-	       		<?php include("vue/utilisateur/login.php"); ?>
+	       		<?php include_once("vue/utilisateur/login.php"); ?>
 	       	</div>  	
 	    </header>
 	    <div class="body">
@@ -21,6 +21,6 @@
 	       		<br>MONT-SHÄFF</b>
 	       	</div>
 	    
-	    <?php include("menu.php"); ?>
+	    <?php include_once("menu.php"); ?>
 	    
 	    <div class="module">

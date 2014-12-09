@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="vue/forum/style.css">
+<link rel="stylesheet" type="text/css" href="vue/utilisateur/style.css">
 
 <?php 
 include('vue/commun/header.php');
@@ -7,7 +7,7 @@ if(isset($_REQUEST['ajoute']))
 	if($_REQUEST['ajoute'])
 	{
 		?>
-		<div>
+		<div class="creation">
 			<h2>L'utilisateur a été ajouté avec succès !</h2>
 		</div>
 		<?php
@@ -22,7 +22,7 @@ if(isset($_REQUEST['ajoute']))
 		}
 }
 ?>
-<div>
+<div class="creation">
 	<form method="post" action="creerCompte.php" enctype="multipart/form-data">
 		Pseudonyme : <input type="text" name="nom"/><br/>
 		Mot de passe : <input type="password" name="motDePasse"/><br/>
