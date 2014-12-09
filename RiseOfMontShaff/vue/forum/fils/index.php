@@ -26,7 +26,7 @@ include('vue/commun/header.php');
 		{
 		?>
 			<div>
-				<h3>
+				
 			<?php if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
 			{
 			?>
@@ -66,7 +66,6 @@ include('vue/commun/header.php');
 				</div>
 				<?php
 			}?>
-				</h3>
 			</div>
 		<?php 
 		}?>
