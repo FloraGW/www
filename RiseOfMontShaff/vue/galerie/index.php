@@ -24,6 +24,16 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 		?>
 			<div>
 				<img src="<?php echo $photo['chemin']; ?>" />
+				<?php
+				if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
+				{?>
+					<form method="post" action="retirer.php">
+						<input type="hidden" name="noPhotoSup" value="<?php echo $photo['noPhoto']; ?>"/>
+						<input type="submit" value="Supprimer"/>
+					</form>
+				<?php
+				}
+				?>
 			</div>
 		<?php
 		}
@@ -61,6 +71,16 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 			<object width="425" height="350" data="http://www.youtube.com/v/<?php echo $video['code']; ?>" type="application/x-shockwave-flash">
 				<param name="src" value="http://www.youtube.com/v/<?php echo $video['code']; ?>" />
 			</object>
+			<?php
+				if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
+				{?>
+					<form method="post" action="retirer.php">
+						<input type="hidden" name="noVideoSup" value="<?php echo $video['noVideo']; ?>"/>
+						<input type="submit" value="Supprimer"/>
+					</form>
+				<?php
+				}
+				?>
 			</div>
 		<?php
 		}
