@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="vue/forum/style.css">
+
 <?php
 include('vue/commun/header.php');
 ?>
@@ -13,7 +15,7 @@ include('vue/commun/header.php');
 		foreach($posts as $post)
 		{
 		?>
-		<div>
+		<div class="post">
 			<span> <!-- Utilisateur -->
 			<?php include('controleur/utilisateur/index.php'); ?>
 			</span>
