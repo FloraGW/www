@@ -38,8 +38,9 @@ div.nouvelleDate {
 }
 
 div.post {
+	margin-bottom: 5px;
 	border-style: solid;
-	border-width: 2px 2px 0px 2px;
+	border-width: 2px 2px 2px 2px;
 	background: rgba(34,34,34,0.85);
 	background: -moz-linear-gradient(left, rgba(34,34,34,0.95) 0%, rgba(34,34,34,0.95) 100%);
 	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(34,34,34,0.95)), color-stop(100%, rgba(34,34,34,0.95)));
@@ -105,4 +106,10 @@ div.postTexte, div.postDate {
 div.postDate {
 	font-size: 75%;
 	text-align: right;
+}
+
+img.image {
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	width: 75%;
 }

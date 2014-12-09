@@ -1,7 +1,6 @@
 @CHARSET "ISO-8859-1";
 
-div.categorie, div.fil {
-	
+div.categorie, div.fil {	
 	padding: 10px;
 }
 div.categorie, div.fil {
@@ -84,16 +83,3 @@ a:hover {
 	color: maroon;
 }
 
-span.gauche, span.droite {
-	border-style: solid;
-	border-width: 2px;
-	display: inline-block;
-	vertical-align: top;
-}
-span.gauche {
-	margin-right: 5px;
-	width: 48.7%;
-}
-span.droite {
-	width: 50%;
-}

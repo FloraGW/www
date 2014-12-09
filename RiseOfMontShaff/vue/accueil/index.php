@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="vue/accueil/style.css">
 
 <?php include_once("vue/commun/header.php"); ?>
-
 <?php 
 if($nouvelle != false)
 {?>
@@ -47,7 +46,6 @@ if($post != false)
 				</div>			
 			</span>	
 		</div>
-	<div class="fin"></div>
 <?php
 }
 else
@@ -59,7 +57,6 @@ else
 	<div class="post">
 		<b>Il n'y a aucun post pour le moment...</b>
 	</div>
-	<div class="fin"></div>
 <?php
 }
 ?>
@@ -67,51 +64,33 @@ else
 
 if($photo != false)
 {?>
-<span class="droite">
-	<div class="section">
-	<div class="item">
-		<img src="<?php echo $photo['chemin']; ?>" />
-	</div>
-	</div>
-	</span>
+		<img class="image" src="<?php echo $photo['chemin']; ?>" />
 <?php
 }
 else
 {?>
-	<span class="droite">
-	<div class="section">
 	<div class="item">
 		<b>Il n'y a aucune photo pour le moment...</b>
 	</div>
-	</div>
-	</span>
 <?php
 }
 if($video != false)
 {?>
-<span class="droite">
-<div class="section">
 	<div class="item">
 		<object width="425" height="350" data="http://www.youtube.com/v/<?php echo $video['code']; ?>" type="application/x-shockwave-flash">
 			<param name="src" value="http://www.youtube.com/v/<?php echo $video['code']; ?>" />
 		</object>
 	</div>
-	</div>
-	</span>
 <?php
 }
 else
 {?>
-	<span class="droite">
-	<div class="section">
 	<div class="item">
 		<b>Il n'y a aucun vidéo pour le moment...</b>
 	</div>
-	</div>
-	</span>
 <?php
 }
 ?>
-</div>
+
 <?php
 include_once("vue/commun/footer.php"); ?>

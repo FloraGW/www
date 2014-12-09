@@ -4,7 +4,7 @@
 include('vue/commun/header.php');
 ?>
 <span class="gauche">
-<div class="section">Photos</div>
+<div class="section">Images</div>
 <div>
 <?php
 if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
