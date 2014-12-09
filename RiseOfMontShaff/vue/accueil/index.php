@@ -1,10 +1,14 @@
 <link rel="stylesheet" type="text/css" href="vue/accueil/style.css">
 
 <?php include_once("vue/commun/header.php"); ?>
+<span class="gauche">
 <?php 
 if($nouvelle != false)
 {?>
 	<div class="nouvelle">
+		<div class="nouvelleTitre" align="center">
+			Dernière nouvelle
+		</div>
 		<div class="nouvelleTitre">
 			<b><?php echo $nouvelle['titre']; ?></b>
 		</div>
@@ -27,6 +31,9 @@ else
 
 if($post != false)
 {?>
+<div class="categorie" align="center">
+Dernière réponse du forum
+</div>
 	<div class="categorie">
 	<a href="categories.php">Forum</a> > 
 	<a href="fils.php?noCategorie=<?php echo $categoriePost['noCategorie']; ?>"><?php echo $categoriePost['nom']; ?></a> > 
@@ -60,11 +67,20 @@ else
 <?php
 }
 ?>
-<?php
+</span>
+<span class="droite">
 
+<?php
 if($photo != false)
 {?>
+<div class="nouvelle">
+	<div class="section">
+	Dernière image
+	</div>
+	<div class="item">
 		<img class="image" src="<?php echo $photo['chemin']; ?>" />
+		</div>
+		</div>
 <?php
 }
 else
@@ -73,13 +89,19 @@ else
 		<b>Il n'y a aucune photo pour le moment...</b>
 	</div>
 <?php
-}
+}?>
+<?php 
 if($video != false)
 {?>
+<div class="nouvelle">
+<div class="section">
+	Dernière vidéo
+	</div>
 	<div class="item">
 		<object width="425" height="350" data="http://www.youtube.com/v/<?php echo $video['code']; ?>" type="application/x-shockwave-flash">
 			<param name="src" value="http://www.youtube.com/v/<?php echo $video['code']; ?>" />
 		</object>
+	</div>
 	</div>
 <?php
 }
@@ -91,6 +113,6 @@ else
 <?php
 }
 ?>
-
+</span>
 <?php
 include_once("vue/commun/footer.php"); ?>
