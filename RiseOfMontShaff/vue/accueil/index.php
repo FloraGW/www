@@ -48,7 +48,7 @@ if($post != false)
 }
 if($video != false)
 {?>
-	<div>
+	<div class="item">
 		<object width="425" height="350" data="http://www.youtube.com/v/<?php echo $video['code']; ?>" type="application/x-shockwave-flash">
 			<param name="src" value="http://www.youtube.com/v/<?php echo $video['code']; ?>" />
 		</object>
