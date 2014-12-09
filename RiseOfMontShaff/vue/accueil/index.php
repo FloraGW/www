@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="vue/accueil/style.css">
 <link rel="stylesheet" type="text/css" href="vue/nouvelles/style.css">
 <link rel="stylesheet" type="text/css" href="vue/forum/style.css">
+<link rel="stylesheet" type="text/css" href="vue/galerie/style.css">
 
 
 <?php include_once("vue/commun/header.php"); ?>
