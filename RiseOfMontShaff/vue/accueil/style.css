@@ -1,16 +1,12 @@
 @CHARSET "ISO-8859-1";
 
-
-
-
-div.post {
-	
+div.accueilGauche {
+	display: inline-block;
+	width: 75%;
+	margin-right: 5px;
 }
 
-div.photo {
-	
-}
-
-div.video {
-	
+div.accueilDroite {
+	display: inline-block;
+	width: 20%;
 }

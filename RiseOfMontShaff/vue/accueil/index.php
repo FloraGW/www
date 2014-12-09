@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="vue/galerie/style.css">
 
 <?php include_once("vue/commun/header.php"); ?>
-
+<div class="accueilGauche">
 <?php 
 if($nouvelle != false)
 {?>
@@ -45,7 +45,10 @@ if($post != false)
 		</div>
 	<div class="fin"></div>
 <?php
-}
+}?>
+</div>
+<div class="accueilDroite">
+<?php
 if($video != false)
 {?>
 	<div class="item">
@@ -56,5 +59,5 @@ if($video != false)
 <?php
 }
 ?>
-
+</div>
 <?php include_once("vue/commun/footer.php"); ?>
