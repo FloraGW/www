@@ -22,6 +22,13 @@ if($nouvelle != false)
 	</div>
 <?php
 }
+else 
+{?>
+	<div class="nouvelle">
+		<b>Il n'y a aucune nouvelle pour le moment...</b>
+	</div>
+<?php
+}
 
 if($post != false)
 {?>
@@ -46,7 +53,20 @@ if($post != false)
 		</div>
 	<div class="fin"></div>
 <?php
-}?>
+}
+else
+{?>
+	<div class="categorie">
+		<a href="categories.php">Forum</a>
+	</div>
+	<div class="fin"></div>
+	<div class="post">
+		<b>Il n'y a aucun post pour le moment...</b>
+	</div>
+	<div class="fin"></div>
+<?php
+}
+?>
 <?php
 
 if($photo != false)
@@ -55,6 +75,17 @@ if($photo != false)
 	<div class="section">
 	<div class="item">
 		<img src="<?php echo $photo['chemin']; ?>" />
+	</div>
+	</div>
+	</span>
+<?php
+}
+else
+{?>
+	<span class="droite">
+	<div class="section">
+	<div class="item">
+		<b>Il n'y a aucune photo pour le moment...</b>
 	</div>
 	</div>
 	</span>
@@ -72,7 +103,19 @@ if($video != false)
 	</div>
 	</span>
 <?php
-}?>
+}
+else
+{?>
+	<span class="droite">
+	<div class="section">
+	<div class="item">
+		<b>Il n'y a aucun vidéo pour le moment...</b>
+	</div>
+	</div>
+	</span>
+<?php
+}
+?>
 </div>
 <?php
 include_once("vue/commun/footer.php"); ?>
