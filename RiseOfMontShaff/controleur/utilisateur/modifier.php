@@ -1,4 +1,7 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 //ERREURS DANS $_REQUEST
 // errNom
 // errMotDePasse
@@ -14,9 +17,10 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 	{
 		include_once('modele/utilisateur/getUtilisateurByNom.php');
 		$utilisateurExiste = getUtilisateurByNom($_POST['nom']);
-		if(utilisateurExiste == false)
+		if($utilisateurExiste == false)
 		{
 			$nom = htmlspecialchars($_POST['nom'], ENT_SUBSTITUTE, "");
+			$_REQUEST['MAJ'] = true;
 		}
 		else 
 		{
@@ -30,6 +34,7 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 		if($_POST['motDePasse'] == $_POST['motDePasse2'])
 		{
 			$motDePasse = $_POST['motDePasse'];
+			$_REQUEST['MAJ'] = true;
 		}
 		else
 		{
@@ -54,6 +59,7 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 				unlink($avatar);
 				$avatar = "vue/utilisateur/image/" . $_SESSION['utilisateur']['nom'] . '.' . $extension_upload;
 				move_uploaded_file($_FILES['image']['tmp_name'], $avatar);
+				$_REQUEST['MAJ'] = true;
 			}
 			else 
 			{
@@ -67,9 +73,13 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 			$_REQUEST['err'] = true;
 		}
 	}
-	include_once('modele/utilisateur/updateUtilisateur.php');
-	updateUtilisateur($_SESSION['utilisateur']['noUtilisateur'], $nom, $motDePasse, $avatar);
-	$_REQUEST['MAJ'] = true;
+	if(isset($_REQUEST['MAJ']) && $_REQUEST['MAJ'])
+	{
+		include_once('modele/utilisateur/updateUtilisateur.php');
+		updateUtilisateur($_SESSION['utilisateur']['noUtilisateur'], $nom, $motDePasse, $avatar);
+		include('modele/utilisateur/getUtilisateur.php');
+		$_SESSION['utilisateur'] = getUtilisateur($_SESSION['utilisateur']['noUtilisateur']);
+	}
 	
 	include_once('vue/utilisateur/modifierCompte.php');
 }
