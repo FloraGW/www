@@ -21,8 +21,8 @@ if(sizeof($categories) != 0)
 	foreach($categories as $categorie)
 	{
 ?>
-<div>
-	<h3>
+<div class="categorie">
+	<b>
 		<?php if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
 		{
 			?>
@@ -59,11 +59,15 @@ if(sizeof($categories) != 0)
 			<?php
 		}?>
 		
-		
-	</h3>	
+		</b>
+	
 </div>
+
 <?php 
-	}
+	}?>
+	<div class="fin">
+</div>
+<?php
 }
 else
 {
