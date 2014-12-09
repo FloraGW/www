@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="vue/forum/style.css">
+
 <?php
 include('vue/commun/header.php');
 ?>
@@ -63,7 +65,17 @@ include('vue/commun/header.php');
 				</h3>
 			</div>
 		<?php
-		}
+		}?>
+		<div class="fil">
+			<b>
+				<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a>
+			</b>	
+		</div>
+		<?php 
+		}?>
+		<div class="fin">
+		</div>
+	<?php
 	}
 	else
 	{
