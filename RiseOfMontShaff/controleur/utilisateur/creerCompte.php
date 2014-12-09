@@ -9,7 +9,7 @@ if(isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['motDePasse']) 
 	{
 		$nom = $_POST['nom'];
 		$motDePasse = $_POST['motDePasse'];
-		$avatar = "";
+		$avatar = "vue/utilisateur/image/defaut.jpg";
 		include_once("modele/utilisateur/validateAvatar.php");
 		include_once('modele/utilisateur/insertUtilisateur.php');
 		$_REQUEST['ajoute'] = insertUtilisateur($nom, $motDePasse, $avatar);
