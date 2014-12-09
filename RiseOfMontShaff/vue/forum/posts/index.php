@@ -22,6 +22,48 @@ include('vue/commun/header.php');
 			<span> <!-- Post -->
 			<?php echo $post['contenu']; ?><br />
 			<i><?php echo $post['dateCreation']; ?></i>
+			
+			
+			
+			<?php if(isset($_SESSION['utilisateur']) 
+					&& (strtolower($_SESSION['utilisateur']['role']) == "admin") 
+					|| $_SESSION['utilisateur']['noUtilisateur'] == $post['noUtilisateur'])
+			{
+			?>
+				<form method="post" action="supprimerPost.php">
+					<input type="hidden" name="noPostSup" value="<?php echo $post['noPost'];?>"/>
+					<input type="submit" value="Supprimer"/>
+				</form>
+				<?php
+				if(isset($_POST['noPostMod']) && $_POST['noPostMod'] == $post['noPost'])
+				{
+					?>
+					<form method="post" action="modifierPost.php">
+						<textarea name="contenu"><?php echo $post['contenu'];?></textarea>
+						<input type="hidden" name="noPostMod" value="<?php echo $post['noPost'];?>"/>
+						<input type="submit" value="Éditer"/>
+					</form>
+					<?php
+				}
+				else
+				{
+					?>
+					<form method="post">
+						<input type="hidden" name="noPostMod" value="<?php echo $post['noPost'];?>"/>
+						<input type="submit" value="Éditer"/>
+					</form>
+					<?php
+				}
+			}
+			else
+			{
+				?>
+				<a href="posts.php?noFil=<?php echo $fil['noFil'];?>"><?php echo $fil['nom']; ?></a>
+				<?php
+			}?>
+			
+			
+			
 			</span>	
 		</div>
 		<?php 
@@ -44,7 +86,7 @@ include('vue/commun/header.php');
 			<textarea name="contenu" rows="8" cols="45"></textarea>
 			<input type="hidden" name="noFil" value="<?php echo $fil['noFil']; ?>" />
 			<input type="hidden" name="noUtilisateur" value="<?php echo $_SESSION['utilisateur']['noUtilisateur']; ?>"/>
-			<input type="submit" value="Créer"/>
+			<input type="submit" value="Publier"/>
 		</form>
 	<?php
 	}

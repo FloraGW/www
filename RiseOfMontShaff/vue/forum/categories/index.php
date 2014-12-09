@@ -30,10 +30,6 @@ if(sizeof($categories) != 0)
 				<input type="hidden" name="noCatSup" value="<?php echo $categorie['noCategorie'];?>"/>
 				<input type="submit" value="Supprimer"/>
 			</form>
-			<form method="post">
-				<input type="hidden" name="noCatMod" value="<?php echo $categorie['noCategorie'];?>"/>
-				<input type="submit" value="Modifier"/>
-			</form>
 			<?php
 			if(isset($_POST['noCatMod']) && $_POST['noCatMod'] == $categorie['noCategorie'])
 			{
@@ -48,6 +44,10 @@ if(sizeof($categories) != 0)
 			else
 			{
 				?>
+				<form method="post">
+					<input type="hidden" name="noCatMod" value="<?php echo $categorie['noCategorie'];?>"/>
+					<input type="submit" value="Modifier"/>
+				</form>
 				<a href="fils.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a>
 				<?php
 			}
