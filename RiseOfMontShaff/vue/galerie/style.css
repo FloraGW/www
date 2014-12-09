@@ -1,10 +1,53 @@
 @CHARSET "ISO-8859-1";
 
-div.module {
+span {
 	border-style: solid;
 	border-width: 2px;
+	display: inline-block;
+	vertical-align: top;
+}
+span.gauche {
+	margin-right: 5px;
+	width: 48.7%;
+}
+span.droite {
+	width: 50%;
 }
 
-span {
-	display: inline-block;
+img {
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	width: 100%;
+}
+
+div.section {
+	padding: 10px;
+	background-image: url('../commun/image/pattern1.jpg');
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-color: white;
+	font-size: 125%;
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+	text-align: center;
+}
+
+div.contenu {
+	background: rgba(222,222,222,0.85);
+background: -moz-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(222,222,222,0.85)), color-stop(100%, rgba(222,222,222,0.85)));
+background: -webkit-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -o-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: linear-gradient(to right, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+
+div.item {
+	padding: 10px 10px 0px 10px;
+	text-align: center;
+}
+
+div.fin {
+	padding-bottom: 10px;
 }

@@ -3,7 +3,8 @@
 <?php
 include('vue/commun/header.php');
 ?>
-<h2>Photos : </h2>
+<span class="gauche">
+<div class="section">Photos</div>
 <div>
 <?php
 if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
@@ -16,7 +17,7 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 }
 ?>
 </div>
-<div>
+<div class="contenu">
 	<?php
 	
 	if(sizeof($photos) != 0)
@@ -24,7 +25,7 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 		foreach($photos as $photo)
 		{
 		?>
-			<div>
+			<div class="item">
 				<img src="<?php echo $photo['chemin']; ?>" />
 				<?php
 				if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
@@ -39,6 +40,9 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 			</div>
 		<?php
 		}
+		?>
+		<div class="fin"></div>
+		<?php
 	}
 	else
 	{
@@ -48,7 +52,9 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 	}
 	?>
 </div>
-<h2>Vidéos : </h2>
+</span><!-- 
+--><span class="droite">
+<div class="section">Vidéos</div>
 <div>
 <?php
 if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
@@ -61,7 +67,7 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 }
 ?>
 </div>
-<div>
+<div class="contenu">
 	<?php
 	
 	if(sizeof($videos) != 0)
@@ -69,7 +75,7 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 		foreach($videos as $video)
 		{
 		?>
-			<div>
+			<div class="item">
 			<object width="425" height="350" data="http://www.youtube.com/v/<?php echo $video['code']; ?>" type="application/x-shockwave-flash">
 				<param name="src" value="http://www.youtube.com/v/<?php echo $video['code']; ?>" />
 			</object>
@@ -85,7 +91,9 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 				?>
 			</div>
 		<?php
-		}
+		}?>
+		<div class="fin"></div>
+		<?php
 	}
 	else
 	{
@@ -95,6 +103,7 @@ if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role'
 	}
 	?>
 </div>
+</span>
 <?php
 include('vue/commun/footer.php');
 ?>
