@@ -9,6 +9,9 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 	<form method="post" action="login.php">
 		<input type="submit" value="Se déconnecter" />
 	</form>
+	| <form action="modifierCompte.php">
+    	<input type="submit" value="Mon compte">
+	</form>
 <?php	
 }
 else
