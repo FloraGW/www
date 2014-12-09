@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="vue/accueil/style.css">
 <link rel="stylesheet" type="text/css" href="vue/nouvelles/style.css">
 <link rel="stylesheet" type="text/css" href="vue/forum/style.css">
-<link rel="stylesheet" type="text/css" href="vue/galerie/style.css">
+
 
 <?php include_once("vue/commun/header.php"); ?>
 
@@ -45,23 +45,33 @@ if($post != false)
 		</div>
 	<div class="fin"></div>
 <?php
+}?>
+<?php
+
+if($photo != false)
+{?>
+<span class="droite">
+	<div class="section">
+	<div class="item">
+		<img src="<?php echo $photo['chemin']; ?>" />
+	</div>
+	</div>
+	</span>
+<?php
 }
 if($video != false)
 {?>
+<span class="droite">
+<div class="section">
 	<div class="item">
 		<object width="425" height="350" data="http://www.youtube.com/v/<?php echo $video['code']; ?>" type="application/x-shockwave-flash">
 			<param name="src" value="http://www.youtube.com/v/<?php echo $video['code']; ?>" />
 		</object>
 	</div>
-<?php
-}
-if($photo != false)
-{?>
-	<div class="item">
-		<img src="<?php echo $photo['chemin']; ?>" />
 	</div>
+	</span>
 <?php
-}
-?>
-
-<?php include_once("vue/commun/footer.php"); ?>
+}?>
+</div>
+<?php
+include_once("vue/commun/footer.php"); ?>

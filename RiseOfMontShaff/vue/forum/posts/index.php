@@ -31,8 +31,8 @@ include('vue/commun/header.php');
 			
 			
 			<?php if(isset($_SESSION['utilisateur']) 
-					&& (strtolower($_SESSION['utilisateur']['role']) == "admin") 
-					|| $_SESSION['utilisateur']['noUtilisateur'] == $post['noUtilisateur'])
+					&& ((strtolower($_SESSION['utilisateur']['role']) == "admin") 
+					|| $_SESSION['utilisateur']['noUtilisateur'] == $post['noUtilisateur']))
 			{?>
 				<div class="form">
 				<?php
