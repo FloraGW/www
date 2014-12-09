@@ -59,18 +59,15 @@ include('vue/commun/header.php');
 			else
 			{
 				?>
-				<a href="posts.php?noFil=<?php echo $fil['noFil'];?>"><?php echo $fil['nom']; ?></a>
+				<div class="fil">
+					<b>
+						<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a>
+					</b>	
+				</div>
 				<?php
 			}?>
 				</h3>
 			</div>
-		<?php
-		}?>
-		<div class="fil">
-			<b>
-				<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a>
-			</b>	
-		</div>
 		<?php 
 		}?>
 		<div class="fin">
