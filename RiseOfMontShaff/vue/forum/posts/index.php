@@ -27,16 +27,11 @@ include('vue/commun/header.php');
 			<?php echo $post['contenu']; ?>
 			</div>
 			
+			<div class="form">
 			<?php if(isset($_SESSION['utilisateur']) 
 					&& (strtolower($_SESSION['utilisateur']['role']) == "admin") 
 					|| $_SESSION['utilisateur']['noUtilisateur'] == $post['noUtilisateur'])
 			{
-			?>
-				<form method="post" action="supprimerPost.php">
-					<input type="hidden" name="noPostSup" value="<?php echo $post['noPost'];?>"/>
-					<input type="submit" value="Supprimer"/>
-				</form>
-				<?php
 				if(isset($_POST['noPostMod']) && $_POST['noPostMod'] == $post['noPost'])
 				{
 					?>
@@ -55,9 +50,14 @@ include('vue/commun/header.php');
 						<input type="submit" value="Éditer"/>
 					</form>
 					<?php
-				}
+				}?>
+				<form method="post" action="supprimerPost.php">
+					<input type="hidden" name="noPostSup" value="<?php echo $post['noPost'];?>"/>
+					<input type="submit" value="Supprimer"/>
+				</form>
+				<?php
 			}
-			?>
+			?></div>
 			
 			</span>	
 		</div>

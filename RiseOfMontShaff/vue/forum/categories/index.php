@@ -23,14 +23,10 @@ if(sizeof($categories) != 0)
 ?>
 <div class="categorie">
 	<b>
+	<a href="fils.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a>
 		<?php if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
 		{
-			?>
-			<form method="post" action="supprimerCategorie.php">
-				<input type="hidden" name="noCatSup" value="<?php echo $categorie['noCategorie'];?>"/>
-				<input type="submit" value="Supprimer"/>
-			</form>
-			<?php
+			
 			if(isset($_POST['noCatMod']) && $_POST['noCatMod'] == $categorie['noCategorie'])
 			{
 				?>
@@ -48,14 +44,18 @@ if(sizeof($categories) != 0)
 					<input type="hidden" name="noCatMod" value="<?php echo $categorie['noCategorie'];?>"/>
 					<input type="submit" value="Modifier"/>
 				</form>
-				<a href="fils.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a>
 				<?php
 			}
+			?>
+						<form method="post" action="supprimerCategorie.php">
+							<input type="hidden" name="noCatSup" value="<?php echo $categorie['noCategorie'];?>"/>
+							<input type="submit" value="Supprimer"/>
+						</form>
+						<?php
 		}
 		else
 		{
 			?>
-			<a href="fils.php?noCategorie=<?php echo $categorie['noCategorie']; ?>"><?php echo $categorie['nom']; ?></a>
 			<?php
 		}?>
 		

@@ -1,8 +1,5 @@
 @CHARSET "ISO-8859-1";
 
-div.module {
-}
-
 div.categorie, div.fil {
 	
 	padding: 10px;
@@ -71,6 +68,11 @@ div.postDate {
 	font-size: 75%;
 	text-align: right;
 }
+div.form {
+	text-align: right;
+	padding: 10px;
+}
+
 
 a {
 	color: chocolate;

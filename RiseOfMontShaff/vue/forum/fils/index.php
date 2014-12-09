@@ -26,15 +26,14 @@ include('vue/commun/header.php');
 		{
 		?>
 			<div>
+				<div class="fil">
+					<b>
+						<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a>
+					</b>	
 				
 			<?php if(isset($_SESSION['utilisateur']) && strtolower($_SESSION['utilisateur']['role']) == "admin")
 			{
-			?>
-				<form method="post" action="supprimerFil.php">
-					<input type="hidden" name="noFilSup" value="<?php echo $fil['noFil'];?>"/>
-					<input type="submit" value="Supprimer"/>
-				</form>
-				<?php
+			
 				if(isset($_POST['noFilMod']) && $_POST['noFilMod'] == $fil['noFil'])
 				{
 					?>
@@ -52,20 +51,22 @@ include('vue/commun/header.php');
 						<input type="hidden" name="noFilMod" value="<?php echo $fil['noFil'];?>"/>
 						<input type="submit" value="Modifier"/>
 					</form>
-					<a href="posts.php?noFil=<?php echo $fil['noFil'];?>"><?php echo $fil['nom']; ?></a>
 					<?php
 				}
+				?>
+					<form method="post" action="supprimerFil.php">
+						<input type="hidden" name="noFilSup" value="<?php echo $fil['noFil'];?>"/>
+						<input type="submit" value="Supprimer"/>
+					</form>
+					<?php
 			}
 			else
 			{
 				?>
-				<div class="fil">
-					<b>
-						<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a>
-					</b>	
-				</div>
+				
 				<?php
 			}?>
+			</div>
 			</div>
 		<?php 
 		}?>
