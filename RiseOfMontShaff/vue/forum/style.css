@@ -4,7 +4,6 @@ div.categorie, div.fil {
 	
 	padding: 10px;
 }
-
 div.categorie, div.fil {
 	border-style: solid;
 	border-width: 2px 2px 0px 2px;
@@ -19,7 +18,6 @@ div.fin {
 	border-width: 0px 0px 2px 0px;
 	margin-bottom: 15px;
 }
-
 div.post {
 	border-style: solid;
 	border-width: 2px 2px 0px 2px;
@@ -40,11 +38,9 @@ div.repondre {
 	background-color: black;
 	background-image: url('../commun/image/pattern2.jpg');
 }
-
 span.postUtilisateur, span.postTexte {
 	display: inline-block;
 }
-
 span.postUtilisateur {
 	padding: 10px;
 	width: 17%;
@@ -81,12 +77,23 @@ div.form {
 	text-align: right;
 	padding: 10px;
 }
-
-
 a {
 	color: chocolate;
 }
-
 a:hover {
 	color: maroon;
+}
+
+span.gauche, span.droite {
+	border-style: solid;
+	border-width: 2px;
+	display: inline-block;
+	vertical-align: top;
+}
+span.gauche {
+	margin-right: 5px;
+	width: 48.7%;
+}
+span.droite {
+	width: 50%;
 }

@@ -1,1 +1,108 @@
 @CHARSET "ISO-8859-1";
+
+div.nouvelle {
+background: rgba(222,222,222,0.85);
+background: -moz-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(222,222,222,0.85)), color-stop(100%, rgba(222,222,222,0.85)));
+background: -webkit-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -o-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+background: linear-gradient(to right, rgba(222,222,222,0.85) 0%, rgba(222,222,222,0.85) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+border-style: solid;
+	border-width: 2px;
+	margin-bottom: 6px;
+}
+
+div.nouvelleTitre, div.nouvelleTexte, div.nouvelleDate {
+	padding: 10px;
+}
+
+div.nouvelleTitre {
+	background-image: url('../commun/image/pattern1.jpg');
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-color: white;
+	font-size: 125%;
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+}
+
+div.nouvelleTexte {
+	text-align: justify;
+}
+
+div.nouvelleDate {
+	text-align: right;
+	font-size: 75%;
+}
+
+div.post {
+	border-style: solid;
+	border-width: 2px 2px 0px 2px;
+	background: rgba(34,34,34,0.85);
+	background: -moz-linear-gradient(left, rgba(34,34,34,0.95) 0%, rgba(34,34,34,0.95) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(34,34,34,0.95)), color-stop(100%, rgba(34,34,34,0.95)));
+	background: -webkit-linear-gradient(left, rgba(34,34,34,0.95) 0%, rgba(34,34,34,0.95) 100%);
+	background: -o-linear-gradient(left, rgba(34,34,34,0.95) 0%, rgba(34,34,34,0.95) 100%);
+	background: -ms-linear-gradient(left, rgba(34,34,34,0.95) 0%, rgba(34,34,34,0.95) 100%);
+	background: linear-gradient(to right, rgba(34,34,34,0.95) 0%, rgba(34,34,34,0.95) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+
+
+a {
+	color: chocolate;
+}
+
+a:hover {
+	color: maroon;
+}
+div.categorie {
+	padding: 10px;
+	font-size: 125%;
+	border-style: solid;
+	border-width: 2px 2px 0px 2px;
+	background-color: black;
+	background-image: url('../commun/image/pattern2.jpg');
+}
+div.fin {
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+}
+span.postUtilisateur, span.postTexte {
+	display: inline-block;
+}
+
+span.postUtilisateur {
+	padding: 10px;
+	width: 17%;
+	background-color: black;
+	background-image: url('../commun/image/pattern2.jpg');
+	border-style: solid;
+	border-width: 0px 2px 0px 0px;
+}
+img.utilisateur {
+	width: 97%;
+	border-style: dashed;
+	border-width: 3px;
+}
+div.utilisateur {
+	font-size: 125%;
+}
+div.utilisateurRole {
+	color: red;
+	font-size: 75%;
+}
+span.postTexte {
+	color: olive;
+	width: 80%;
+	vertical-align: top;
+}
+div.postTexte, div.postDate {
+	padding: 10px;
+}
+div.postDate {
+	font-size: 75%;
+	text-align: right;
+}

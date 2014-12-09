@@ -1,6 +1,6 @@
 @CHARSET "ISO-8859-1";
 
-span {
+span.gauche, span.droite {
 	border-style: solid;
 	border-width: 2px;
 	display: inline-block;
