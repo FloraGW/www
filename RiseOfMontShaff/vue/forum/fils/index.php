@@ -32,10 +32,6 @@ include('vue/commun/header.php');
 					<input type="hidden" name="noFilSup" value="<?php echo $fil['noFil'];?>"/>
 					<input type="submit" value="Supprimer"/>
 				</form>
-				<form method="post">
-					<input type="hidden" name="noFilMod" value="<?php echo $fil['noFil'];?>"/>
-					<input type="submit" value="Modifier"/>
-				</form>
 				<?php
 				if(isset($_POST['noFilMod']) && $_POST['noFilMod'] == $fil['noFil'])
 				{
@@ -50,6 +46,10 @@ include('vue/commun/header.php');
 				else
 				{
 					?>
+					<form method="post">
+						<input type="hidden" name="noFilMod" value="<?php echo $fil['noFil'];?>"/>
+						<input type="submit" value="Modifier"/>
+					</form>
 					<a href="posts.php?noFil=<?php echo $fil['noFil'];?>"><?php echo $fil['nom']; ?></a>
 					<?php
 				}
