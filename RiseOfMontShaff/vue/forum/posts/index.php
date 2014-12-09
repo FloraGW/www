@@ -85,7 +85,7 @@ include('vue/commun/header.php');
 	</div>
 	<div class="repondre">
 		<form method="post" action="creerPost.php">
-			<textarea name="contenu" rows="8" cols="119"></textarea>
+			<textarea name="contenu" rows="10" cols="119"></textarea>
 			<br />
 			<input type="hidden" name="noFil" value="<?php echo $fil['noFil']; ?>" />
 			<input type="hidden" name="noUtilisateur" value="<?php echo $_SESSION['utilisateur']['noUtilisateur']; ?>"/>
