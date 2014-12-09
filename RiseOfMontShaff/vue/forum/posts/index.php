@@ -16,14 +16,16 @@ include('vue/commun/header.php');
 		{
 		?>
 		<div class="post">
-			<span> <!-- Utilisateur -->
+			<span class="postUtilisateur"> <!-- Utilisateur -->
 			<?php include('controleur/utilisateur/index.php'); ?>
-			</span>
-			<span> <!-- Post -->
-			<?php echo $post['contenu']; ?><br />
-			<i><?php echo $post['dateCreation']; ?></i>
-			
-			
+			</span><!-- 
+			--><span class="postTexte"> <!-- Post -->
+			<div class="postDate">
+			<b><?php echo $post['dateCreation']; ?></b>
+			</div>
+			<div class="postTexte">
+			<?php echo $post['contenu']; ?>
+			</div>
 			
 			<?php if(isset($_SESSION['utilisateur']) 
 					&& (strtolower($_SESSION['utilisateur']['role']) == "admin") 
@@ -55,19 +57,14 @@ include('vue/commun/header.php');
 					<?php
 				}
 			}
-			else
-			{
-				?>
-				<a href="posts.php?noFil=<?php echo $fil['noFil'];?>"><?php echo $fil['nom']; ?></a>
-				<?php
-			}?>
-			
-			
+			?>
 			
 			</span>	
 		</div>
 		<?php 
-		}
+		}?>
+		<div class="fin"></div>
+		<?php
 	}
 	else
 	{

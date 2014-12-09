@@ -2,9 +2,9 @@
 if($utilisateur != false)
 {
 ?>
-	<img src="<?php echo $utilisateur['avatar']; ?>" /><br/>
-	<h3><?php echo $utilisateur['nom']; ?></h3>
-	<h5><?php echo $utilisateur['role']; ?></h5>
+	<img class="utilisateur" src="<?php echo $utilisateur['avatar']; ?>" /><br/>
+	<div class="utilisateur"><b><?php echo $utilisateur['nom']; ?></b></div>
+	<div class="utilisateurRole"><b><i><?php echo $utilisateur['role']; ?></i></b></div>
 <?php
 }
 else
