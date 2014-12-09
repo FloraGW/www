@@ -21,3 +21,9 @@ form {
 	margin: 0px;
 	display: inline-block;
 }
+
+img.utilisateur {
+	width: 128px;
+	border-style: dashed;
+	border-width: 3px;
+}

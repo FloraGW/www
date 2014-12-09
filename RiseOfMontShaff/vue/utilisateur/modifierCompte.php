@@ -53,8 +53,8 @@ else
 		Pseudonyme : <input type="text" name="nom"/><br/>
 		Mot de passe : <input type="password" name="motDePasse"/><br/>
 		Entrez à nouveau le mot de passe : <input type="password" name="motDePasse2"/><br/>
-		Image actuelle : <img src="<?php echo $_SESSION['utilisateur']['avatar']; ?>" /><br/>
-		Avatar : <input type="file" name="image"/><br/>
+		Avatar actuel :<br /><img class="utilisateur" src="<?php echo $_SESSION['utilisateur']['avatar']; ?>" /><br/>
+		Nouvel avatar : <input type="file" name="image"/><br/>
 		<input type="submit" value="Modifier">
 	</form>
 </div>
