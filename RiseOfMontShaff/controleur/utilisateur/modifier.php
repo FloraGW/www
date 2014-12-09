@@ -1,4 +1,9 @@
 <?php
+//ERREURS DANS $_REQUEST
+// errNom
+// errMotDePasse
+// errImageExtension
+// errImageSize
 if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 {
 	$nom = htmlspecialchars($_SESSION['utilisateur']['nom'], ENT_SUBSTITUTE, "");
@@ -16,6 +21,7 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 		else 
 		{
 			$_REQUEST['errNom'] = true;
+			$_REQUEST['err'] = true;
 		}
 	}
 	if(isset($_POST['motDePasse']) && !empty($_POST['motDePasse']) 
@@ -28,6 +34,7 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 		else
 		{
 			$_REQUEST['errMotDePasse'] = true;
+			$_REQUEST['err'] = true;
 		}
 		
 	}
@@ -43,25 +50,32 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 			$extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
 			if (in_array($extension_upload, $extensions_autorisees))
 			{
-				include_once('modele/galerie/insertImage.php');
-				$dossier = 'vue/galerie/image/';
-				$chemin = insertImage($dossier, $extension_upload);
-					
 				// On peut valider le fichier et le stocker définitivement
-				move_uploaded_file($_FILES['image']['tmp_name'], $chemin);
-				
-				//IL FAUT SUPPRIMER L'ANCIENNE PHOTO DE LA BASE DE DONNÉES ET DES FICHIERS !!!
+				unlink($avatar);
+				$avatar = "vue/utilisateur/image/" . $_SESSION['utilisateur']['nom'] . '.' . $extension_upload;
+				move_uploaded_file($_FILES['image']['tmp_name'], $avatar);
 			}
 			else 
 			{
 				$_REQUEST['errImageExtension'] = true;
+				$_REQUEST['err'] = true;
 			}
 		}
 		else
 		{
 			$_REQUEST['errImageSize'] = true;
+			$_REQUEST['err'] = true;
 		}
 	}
+	include_once('modele/utilisateur/updateUtilisateur.php');
+	updateUtilisateur($_SESSION['utilisateur']['noUtilisateur'], $nom, $motDePasse, $avatar);
+	$_REQUEST['MAJ'] = true;
+	
+	include_once('vue/utilisateur/modifierCompte.php');
 }
-include_once('vue/utilisateur/modifierCompte.php');
+else 
+{
+	header('Location: pageInexistante.php');
+	exit();
+}
 ?>
