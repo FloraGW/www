@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 08 Décembre 2014 à 05:09
+-- Généré le :  Mar 09 Décembre 2014 à 06:13
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -30,17 +30,15 @@ CREATE TABLE IF NOT EXISTS `categorie` (
   `noCategorie` int(11) NOT NULL AUTO_INCREMENT,
   `Nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`noCategorie`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `categorie`
 --
 
 INSERT INTO `categorie` (`noCategorie`, `Nom`) VALUES
-(1, 'Divers'),
-(2, 'Problèmes techniques'),
-(3, 'Suggestions'),
-(4, 'Guides');
+(2, 'Problèmes Techniques'),
+(5, 'Divers');
 
 -- --------------------------------------------------------
 
@@ -53,14 +51,17 @@ CREATE TABLE IF NOT EXISTS `fil` (
   `noCategorie` int(11) NOT NULL,
   `Nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`noFil`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `fil`
 --
 
 INSERT INTO `fil` (`noFil`, `noCategorie`, `Nom`) VALUES
-(1, 1, 'PREMIER FIL');
+(2, 5, 'Test1'),
+(3, 5, 'Test2'),
+(4, 5, 'YAHOO'),
+(5, 5, 'Test3');
 
 -- --------------------------------------------------------
 
@@ -99,14 +100,18 @@ CREATE TABLE IF NOT EXISTS `post` (
   `Contenu` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `DateCreation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`noPost`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `post`
 --
 
 INSERT INTO `post` (`noPost`, `noFil`, `noUtilisateur`, `Contenu`, `DateCreation`) VALUES
-(1, 1, 1, 'Premier fil du forum !!!', '2014-12-08 03:14:57');
+(2, 2, 1, 'Une fois de plus, l''équipe de MicroShäff réussit à surprendre ses usagers en affichant un tout nouveau post !!!', '0000-00-00 00:00:00'),
+(3, 4, 1, 'testons', '2014-12-09 00:29:10'),
+(4, 4, 1, 'Testons encore !! :D', '2014-12-09 00:29:20'),
+(5, 4, 2, 'Dieu&lt;', '2014-12-09 00:29:46'),
+(6, 2, 5, 'Ouuuuuaaaaiiiiisssss !!!', '2014-12-09 00:33:58');
 
 -- --------------------------------------------------------
 
@@ -121,14 +126,17 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Role` varchar(25) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `Avatar` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`noUtilisateur`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`noUtilisateur`, `Nom`, `MotDePasse`, `Role`, `Avatar`) VALUES
-(1, 'Sideni', '123456', 'Dieu', 'vue/utilisateur/image/sideni.jpg');
+(1, 'Sideni', '123456', 'Admin', 'vue/utilisateur/image/sideni.jpg'),
+(2, 'Dieu', 'dieu', 'Admin', 'vue/utilisateur/image/Dieu.jpg'),
+(3, 'Flora', '1234', 'Admin', 'vue/utilisateur/image/Flora.jpg'),
+(5, 'test', 'test', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
