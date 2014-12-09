@@ -25,16 +25,13 @@ include('vue/commun/header.php');
 		foreach($fils as $fil)
 		{
 		?>
-		<div class="fil">
+		<div>
 			<b>
 				<a href="posts.php?noFil=<?php echo $fil['noFil']; ?>"><?php echo $fil['nom']; ?></a>
 			</b>	
 		</div>
 		<?php 
-		}?>
-		<div class="fin">
-</div>
-	<?php 	
+		}
 	}
 	else
 	{
