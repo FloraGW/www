@@ -13,12 +13,13 @@
 	    <header>
 	    	<div class="header">
 	       		<?php include("vue/utilisateur/login.php"); ?>
-	       	</div>
-	       	<div class="titre">
+	       	</div>  	
+	    </header>
+	    <div class="body">
+	    	<div class="titre">
 	       		<b>THE RISE OF
 	       		<br>MONT-SHÄFF</b>
 	       	</div>
-	    </header>
 	    
 	    <?php include("menu.php"); ?>
 	    

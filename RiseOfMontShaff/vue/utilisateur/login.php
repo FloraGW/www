@@ -1,3 +1,5 @@
+<div class="login">
+
 <?php
 if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 {
@@ -15,11 +17,12 @@ else
 		Pseudonyme : <input type="text" name="nom" />
 		Mot de passe : <input type="password" name="motDePasse" />
 		<input type="submit" value="Se connecter" />
-	</form>
+	</form><!-- 
   | <form action="creerCompte.php">
     	<input type="submit" value="Créer un compte">
-	</form>
+	</form> -->
 <?php
 }
 ?>
 
+</div>

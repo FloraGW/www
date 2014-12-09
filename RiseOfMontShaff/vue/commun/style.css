@@ -13,6 +13,7 @@ body {
 	background-size: cover;
 	margin: 0px;
 	height: 100%;
+	text-align: center;
 }
 
 header {
@@ -51,10 +52,13 @@ div.footer {
 	clear:both;
 }
 
-form.header {
-	
+div.login {
+	margin-right: 10px;
 }
-
+div.body {
+	margin: auto;
+	width: 1000px;
+}
 div.titre {
 	text-align: center;
 	font-size: 200%;
@@ -62,10 +66,7 @@ div.titre {
 	padding-bottom: 60px;
 }
 div.menu, div.module {
-	margin-left: 25%;
-	margin-right: 25%;
-	min-width: 1000px;
-	
+	text-align: left;
 }
 div.menu {
 	padding-top: 1px;
