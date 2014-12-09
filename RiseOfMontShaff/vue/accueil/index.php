@@ -55,6 +55,13 @@ if($video != false)
 	</div>
 <?php
 }
+if($photo != false)
+{?>
+	<div class="item">
+		<img src="<?php echo $photo['chemin']; ?>" />
+	</div>
+<?php
+}
 ?>
 
 <?php include_once("vue/commun/footer.php"); ?>

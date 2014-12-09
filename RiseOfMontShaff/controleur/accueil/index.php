@@ -25,5 +25,9 @@ include_once('modele/accueil/getLatestVideo.php');
 $video = getLatestVideo();
 $video['code'] = htmlspecialchars($video['code'], ENT_SUBSTITUTE, "");
 
+include_once('modele/accueil/getLatestPhoto.php');
+$photo = getLatestPhoto();
+$photo['chemin'] = htmlspecialchars($photo['chemin'], ENT_SUBSTITUTE, "");
+
 include_once('vue/accueil/index.php');
 ?>
