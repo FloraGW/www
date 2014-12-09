@@ -56,7 +56,10 @@ if(isset($_SESSION['utilisateur']) && $_SESSION['utilisateur'] != null)
 			if (in_array($extension_upload, $extensions_autorisees))
 			{
 				// On peut valider le fichier et le stocker définitivement
-				unlink($avatar);
+				if(file_exists($avatar))
+				{
+					unlink($avatar);
+				}
 				$avatar = "vue/utilisateur/image/" . $_SESSION['utilisateur']['nom'] . '.' . $extension_upload;
 				move_uploaded_file($_FILES['image']['tmp_name'], $avatar);
 				$_REQUEST['MAJ'] = true;
